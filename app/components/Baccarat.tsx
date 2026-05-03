@@ -159,7 +159,7 @@ export default function Baccarat() {
         {/* CTAs */}
         <div className="reveal flex flex-wrap gap-4 justify-center" style={{ transitionDelay: "760ms" }}>
           <a
-            href={c.btnPdf}
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}${c.btnPdf}`}
             target="_blank"
             rel="noopener noreferrer"
             download

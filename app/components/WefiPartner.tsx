@@ -253,7 +253,7 @@ export default function WefiPartner() {
             </svg>
           </a>
           <a
-            href="/WeFi-Gitbook-Deutsch.pdf"
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/WeFi-Gitbook-Deutsch.pdf`}
             target="_blank"
             rel="noopener noreferrer"
             download
