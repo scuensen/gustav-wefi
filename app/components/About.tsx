@@ -1,8 +1,8 @@
-import { content } from "../content";
-
-const c = content.about;
+"use client";
+import { useContent } from "../context/ContentContext";
 
 export default function About() {
+  const c = useContent().about;
   return (
     <section id="about" className="py-24 px-6" style={{ backgroundColor: "#07101F" }}>
       <div className="max-w-6xl mx-auto">

@@ -1,9 +1,8 @@
 "use client";
-import { content } from "../content";
-
-const c = content.testimonials;
+import { useContent } from "../context/ContentContext";
 
 export default function Testimonials() {
+  const c = useContent().testimonials;
   return (
     <section
       id="testimonials"

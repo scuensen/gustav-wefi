@@ -1,11 +1,11 @@
 "use client";
 import { Globe, Shield, BarChart3, Users } from "lucide-react";
-import { content } from "../content";
+import { useContent } from "../context/ContentContext";
 
-const c = content.wefi;
 const featureIcons = [Globe, Shield, BarChart3, Users];
 
 export default function WefiSection() {
+  const c = useContent().wefi;
   return (
     <section id="wefi" className="py-24 px-6 relative overflow-hidden" style={{ backgroundColor: "#0A1628" }}>
       <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 blur-3xl" style={{ backgroundColor: "#C9A84C" }} />

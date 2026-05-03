@@ -1,9 +1,9 @@
 "use client";
-import { content } from "../content";
+import { useContent } from "../context/ContentContext";
 
-const c = content.wefiPartner;
-
-const points = [
+export default function WefiPartner() {
+  const c = useContent().wefiPartner;
+  const points = [
   {
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
@@ -43,8 +43,6 @@ const points = [
     desc: c.point4Desc,
   },
 ];
-
-export default function WefiPartner() {
   return (
     <section
       id="wefi-partner"

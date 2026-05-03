@@ -1,8 +1,6 @@
 "use client";
 import { useRef } from "react";
-import { content } from "../content";
-
-const c = content.process;
+import { useContent } from "../context/ContentContext";
 
 function TiltCard({ children, className, style }: { children: React.ReactNode; className?: string; style?: React.CSSProperties }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,6 +29,7 @@ function TiltCard({ children, className, style }: { children: React.ReactNode; c
 }
 
 export default function Process() {
+  const c = useContent().process;
   return (
     <section id="process" className="py-24 px-6" style={{ backgroundColor: "#07101F" }}>
       <div className="max-w-6xl mx-auto">

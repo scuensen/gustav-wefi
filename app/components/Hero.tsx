@@ -1,9 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { ArrowRight, TrendingUp } from "lucide-react";
-import { content } from "../content";
-
-const c = content.hero;
+import { useContent } from "../context/ContentContext";
 
 function useCountUp(target: string, inView: boolean) {
   const [display, setDisplay] = useState("0");
@@ -28,6 +26,8 @@ function useCountUp(target: string, inView: boolean) {
 type Particle = { id: number; left: string; size: number; duration: number; delay: number };
 
 export default function Hero() {
+  const content = useContent();
+  const c = content.hero;
   const [parallax, setParallax] = useState(0);
   const [particles, setParticles] = useState<Particle[]>([]);
   const [statsVisible, setStatsVisible] = useState(false);

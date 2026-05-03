@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { ContentProvider } from "./context/ContentContext";
+import TweaksPanel from "./components/TweaksPanel";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -32,7 +34,10 @@ export default function RootLayout({
   return (
     <html lang="de" className={`${inter.variable} ${playfair.variable} h-full`}>
       <body className="min-h-full flex flex-col antialiased" style={{ backgroundColor: "#0A1628", color: "#fff" }}>
-        {children}
+        <ContentProvider>
+          {children}
+          <TweaksPanel />
+        </ContentProvider>
       </body>
     </html>
   );

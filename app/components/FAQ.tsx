@@ -1,10 +1,9 @@
 "use client";
 import { useState } from "react";
-import { content } from "../content";
-
-const c = content.faq;
+import { useContent } from "../context/ContentContext";
 
 export default function FAQ() {
+  const c = useContent().faq;
   const [open, setOpen] = useState<number | null>(null);
 
   return (

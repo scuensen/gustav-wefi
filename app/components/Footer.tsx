@@ -1,8 +1,8 @@
-import { content } from "../content";
-
-const c = content.footer;
+"use client";
+import { useContent } from "../context/ContentContext";
 
 export default function Footer() {
+  const c = useContent().footer;
   return (
     <footer
       className="py-12 px-6 text-center"

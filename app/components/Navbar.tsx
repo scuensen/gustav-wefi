@@ -1,12 +1,12 @@
 "use client";
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
-import { content } from "../content";
+import { useContent } from "../context/ContentContext";
 import BookingModal from "./BookingModal";
 
-const links = content.nav.links;
-
 export default function Navbar() {
+  const content = useContent();
+  const links = content.nav.links;
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);

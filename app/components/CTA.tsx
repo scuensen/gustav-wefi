@@ -1,12 +1,11 @@
 "use client";
 import { useState } from "react";
 import { ArrowRight, Mail, Phone } from "lucide-react";
-import { content } from "../content";
+import { useContent } from "../context/ContentContext";
 import BookingModal from "./BookingModal";
 
-const c = content.cta;
-
 export default function CTA() {
+  const c = useContent().cta;
   const [modalOpen, setModalOpen] = useState(false);
 
   return (
