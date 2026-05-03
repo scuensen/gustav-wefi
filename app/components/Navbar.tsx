@@ -2,12 +2,14 @@
 import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { content } from "../content";
+import BookingModal from "./BookingModal";
 
 const links = content.nav.links;
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20);
@@ -16,6 +18,8 @@ export default function Navbar() {
   }, []);
 
   return (
+    <>
+    <BookingModal open={modalOpen} onClose={() => setModalOpen(false)} />
     <nav
       className="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
       style={{
@@ -87,15 +91,15 @@ export default function Navbar() {
             </svg>
           </a>
           {/* Main CTA */}
-          <a
-            href="#cta"
+          <button
+            onClick={() => setModalOpen(true)}
             className="btn-shimmer inline-flex items-center gap-2 px-[18px] py-2.5 rounded-full text-[13px] font-semibold transition-all duration-200"
             style={{ backgroundColor: "#C9A84C", color: "#0A1628" }}
             onMouseEnter={(e) => { const el = e.currentTarget; el.style.backgroundColor = "#E8C96A"; el.style.transform = "translateY(-1px)"; }}
             onMouseLeave={(e) => { const el = e.currentTarget; el.style.backgroundColor = "#C9A84C"; el.style.transform = "translateY(0)"; }}
           >
             {content.nav.cta}
-          </a>
+          </button>
         </div>
 
         {/* Mobile toggle */}
@@ -125,16 +129,16 @@ export default function Navbar() {
               <path d="M7 17L17 7"/><path d="M8 7h9v9"/>
             </svg>
           </a>
-          <a
-            href="#cta"
+          <button
             className="inline-flex items-center justify-center px-5 py-2 rounded-full text-sm font-semibold mt-2"
             style={{ backgroundColor: "#C9A84C", color: "#0A1628" }}
-            onClick={() => setOpen(false)}
+            onClick={() => { setOpen(false); setModalOpen(true); }}
           >
             {content.nav.cta}
-          </a>
+          </button>
         </div>
       )}
     </nav>
+    </>
   );
 }
