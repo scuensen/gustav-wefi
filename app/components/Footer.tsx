@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useContent } from "../context/ContentContext";
 
 export default function Footer() {
@@ -26,9 +27,9 @@ export default function Footer() {
       <p className="text-xs mb-1" style={{ color: "#64748b" }}>
         © {new Date().getFullYear()} Gustav Mostetschnig. Alle Rechte vorbehalten.
         <span className="mx-2">·</span>
-        <a href="/impressum" style={{ color: "#94a3b8" }} className="hover:underline">Impressum</a>
+        <Link href="/impressum" style={{ color: "#94a3b8" }} className="hover:underline">Impressum</Link>
         <span className="mx-2">·</span>
-        <a href="/datenschutz" style={{ color: "#94a3b8" }} className="hover:underline">Datenschutz</a>
+        <Link href="/datenschutz" style={{ color: "#94a3b8" }} className="hover:underline">Datenschutz</Link>
       </p>
       <p className="text-[11px] mt-2 max-w-2xl mx-auto" style={{ color: "#475569" }}>{c.disclaimer}</p>
     </footer>
