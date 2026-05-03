@@ -41,7 +41,7 @@ export default function Navbar() {
             style={{ objectFit: "contain", filter: "drop-shadow(0 2px 6px rgba(201,168,76,0.25))" }}
           />
           <span
-            className="hidden lg:inline text-[15px] font-semibold tracking-wide"
+            className="hidden xl:inline text-[15px] font-semibold tracking-wide"
             style={{ fontFamily: "var(--font-playfair)", color: "#fff", letterSpacing: "0.02em" }}
           >
             Gustav Mostetschnig
@@ -49,29 +49,24 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav links */}
-        <ul className="hidden lg:flex gap-7">
+        <ul className="hidden lg:flex gap-5 flex-nowrap">
           {links.map((l) => (
-            <li key={l.href}>
+            <li key={l.href} className="flex-shrink-0">
               <a
                 href={l.href}
-                className="text-[13.5px] font-medium transition-colors duration-200 relative group"
+                className="text-[13px] font-medium transition-colors duration-200 whitespace-nowrap"
                 style={{ color: "#94a3b8" }}
+                onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#C9A84C")}
+                onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#94a3b8")}
               >
-                <span
-                  className="transition-colors duration-200 group-hover:text-[#C9A84C]"
-                  style={{ color: "inherit" }}
-                  onMouseEnter={(e) => ((e.currentTarget.parentElement as HTMLElement).style.color = "#C9A84C")}
-                  onMouseLeave={(e) => ((e.currentTarget.parentElement as HTMLElement).style.color = "#94a3b8")}
-                >
-                  {l.label}
-                </span>
+                {l.label}
               </a>
             </li>
           ))}
         </ul>
 
         {/* Actions */}
-        <div className="hidden lg:flex items-center gap-3">
+        <div className="hidden lg:flex items-center gap-2 flex-shrink-0">
           <LanguageSwitcher />
           {/* wefi.co external link */}
           <a
@@ -105,7 +100,7 @@ export default function Navbar() {
         </div>
 
         {/* Mobile toggle */}
-        <button className="lg:hidden text-white" onClick={() => setOpen(!open)}>
+        <button className="lg:hidden text-white flex-shrink-0" onClick={() => setOpen(!open)}>
           {open ? <X size={22} /> : <Menu size={22} />}
         </button>
       </div>
