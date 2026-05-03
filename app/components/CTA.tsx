@@ -3,6 +3,7 @@ import { useState } from "react";
 import { ArrowRight, Mail, Phone } from "lucide-react";
 import { useContent } from "../context/ContentContext";
 import BookingModal from "./BookingModal";
+import SocialLinks from "./SocialLinks";
 
 export default function CTA() {
   const c = useContent().cta;
@@ -102,6 +103,19 @@ export default function CTA() {
               <Phone size={14} />
               {c.phone}
             </a>
+            <a
+              href={`tel:${c.phone2?.replace(/\s/g, "")}`}
+              className="flex items-center justify-center gap-2 text-sm transition-colors duration-200"
+              style={{ color: "#64748b" }}
+              onMouseEnter={(e) => ((e.currentTarget as HTMLElement).style.color = "#C9A84C")}
+              onMouseLeave={(e) => ((e.currentTarget as HTMLElement).style.color = "#64748b")}
+            >
+              <Phone size={14} />
+              {c.phone2}
+            </a>
+          </div>
+          <div className="reveal mt-10 flex justify-center" style={{ transitionDelay: "480ms" }}>
+            <SocialLinks size={18} />
           </div>
         </div>
       </section>

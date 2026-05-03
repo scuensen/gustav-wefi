@@ -4,6 +4,7 @@ import About from "./components/About";
 import Process from "./components/Process";
 import WefiSection from "./components/WefiSection";
 import WefiPartner from "./components/WefiPartner";
+import Baccarat from "./components/Baccarat";
 import Testimonials from "./components/Testimonials";
 import FAQ from "./components/FAQ";
 import CTA from "./components/CTA";
@@ -21,6 +22,7 @@ export default function Home() {
         <Process />
         <WefiSection />
         <WefiPartner />
+        <Baccarat />
         <Testimonials />
         <FAQ />
         <CTA />

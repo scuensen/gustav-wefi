@@ -11,6 +11,7 @@ export const content = {
       { label: "Profil", href: "#about" },
       { label: "Methodik", href: "#process" },
       { label: "Partner-System", href: "#wefi" },
+      { label: "Baccarat", href: "#baccarat" },
       { label: "Referenzen", href: "#testimonials" },
       { label: "FAQ", href: "#faq" },
     ],
@@ -19,12 +20,12 @@ export const content = {
 
   // --- HERO ---
   hero: {
-    badge: "Mentor für strukturierten Vermögensaufbau · DACH",
+    badge: "Mentor für strukturierten Vermögensaufbau · DACH & Südtirol",
     headline1: "Strukturierter Aufbau",
     headline2: "eines zweiten",
     headline3: "Einkommensstandbeins.",
     subtext:
-      "Ich begleite Berufstätige im DACH-Raum beim methodischen Aufbau eines unternehmerischen Zweitstandbeins — auf Basis eines etablierten Partner-Systems, mit klaren Prozessen, persönlicher Begleitung und nachvollziehbaren Schritten.",
+      "Ich begleite Berufstätige im DACH-Raum und Südtirol beim methodischen Aufbau eines unternehmerischen Zweitstandbeins — auf Basis zweier etablierter Partner-Systeme (WeFi & Baccarat Entertainment), mit klaren Prozessen, persönlicher Begleitung und nachvollziehbaren Schritten.",
     buttonPrimary: "Erstgespräch vereinbaren",
     buttonSecondary: "Profil ansehen",
     stats: [
@@ -40,14 +41,14 @@ export const content = {
     headline1: "Über zwölf Jahre Erfahrung im",
     headline2: "strukturierten Netzwerkaufbau.",
     text1:
-      "Seit 2013 begleite ich Berufstätige, Selbstständige und Quereinsteiger im deutschsprachigen Raum dabei, ein unternehmerisches Zweiteinkommen aufzubauen. Mein Anspruch ist nicht das schnelle Versprechen, sondern eine belastbare, langfristig tragfähige Struktur.",
+      "Seit 2013 begleite ich Berufstätige, Selbstständige und Quereinsteiger im DACH-Raum sowie Südtirol dabei, ein unternehmerisches Zweiteinkommen aufzubauen. Mein Anspruch ist nicht das schnelle Versprechen, sondern eine belastbare, langfristig tragfähige Struktur. Mein Wohnsitz liegt heute in Larnaca, Zypern — meine Tätigkeit bleibt im deutschsprachigen Raum verankert.",
     text2:
       "Die Zusammenarbeit basiert auf klaren Prozessen, dokumentierten Schritten und einer persönlichen 1:1-Begleitung. Statt generischer Inhalte erhalten Sie eine auf Ihre Lebenssituation, Ihre verfügbare Zeit und Ihre Ziele zugeschnittene Roadmap.",
     highlights: [
       "Über 12 Jahre Praxis im strukturierten Netzwerkaufbau",
-      "Mehr als 500 persönlich begleitete Partner im DACH-Raum",
-      "Spezialisierung auf Quereinsteiger ohne Vertriebshintergrund",
-      "Direkte, persönliche Erreichbarkeit — keine Vertriebsfunnel",
+      "Mehr als 500 persönlich begleitete Partner im DACH-Raum & Südtirol",
+      "Zwei etablierte Partner-Systeme: WeFi & Baccarat Entertainment",
+      "Wohnsitz Larnaca · direkte, persönliche Erreichbarkeit",
     ],
   },
 
@@ -92,18 +93,19 @@ export const content = {
       "Vollständig dokumentierter, einsehbarer Vergütungsplan",
       "Etablierte Mentoring-Strukturen auf allen Ebenen",
     ],
-    button: "Erstgespräch vereinbaren",
+    button: "WeFi-Gitbook (PDF) öffnen",
+    wefiBtnPdf: "/WeFi-Gitbook-Deutsch.pdf",
     buttonHref: "#cta",
     card: {
       title: "wefi.co",
-      subtitle: "Partner-System · Eckdaten der Zusammenarbeit",
+      subtitle: "Kerndaten des Ökosystems",
       rows: [
-        { label: "Vergütungsplan", value: "transparent dokumentiert" },
-        { label: "Markteintritt", value: "ohne hohe Vorinvestition" },
-        { label: "Begleitung", value: "persönliches 1:1-Mentoring" },
+        { label: "Netzwerk", value: "WeChain" },
+        { label: "Modell", value: "Deobank · regulierungskonform" },
+        { label: "Token", value: "$WFI · Utility & Governance" },
       ],
       disclaimer:
-        "Diese Darstellung stellt kein Einkommensversprechen dar. Geschäftlicher Erfolg hängt maßgeblich vom individuellen Einsatz ab.",
+        "Hinweis: Diese Darstellung stellt kein Anlage- oder Einkommensversprechen dar. Geschäftlicher Erfolg hängt maßgeblich vom individuellen Einsatz ab.",
     },
   },
 
@@ -112,18 +114,38 @@ export const content = {
     eyebrow: "WEFI · INTERNATIONAL PARTNER",
     h1: "Aufgebaut auf",
     h2: "wefi.co.",
-    lead: "Die operative Grundlage meiner Tätigkeit ist die Zusammenarbeit mit wefi.co — einer international ausgerichteten Plattform für Finanzbildung und Vermögensaufbau, die regulierte Produkte, transparente Vergütung und professionelle Mentoring-Strukturen unter einem Dach bündelt.",
+    lead: "Operativ arbeite ich mit wefi.co — einer international aufgestellten Plattform mit klarem regulatorischen Rahmen. Welche Möglichkeiten konkret zu Ihrer Situation passen, besprechen wir am besten persönlich.",
     point1Title: "International etabliert",
-    point1Desc: "Aktiv in über 20 Ländern Europas, Lateinamerikas und Asiens. Eine gewachsene Infrastruktur mit langjähriger Marktpräsenz.",
+    point1Desc: "Eine gewachsene Infrastruktur mit Marktpräsenz in mehreren Ländern.",
     point2Title: "Reguliertes Umfeld",
-    point2Desc: "Vollständige Compliance-Dokumentation, lizenzierte Partnerprodukte und ein klar definierter rechtlicher Rahmen.",
-    point3Title: "Transparente Vergütung",
-    point3Desc: "Ein offen einsehbarer, nachvollziehbarer Vergütungsplan ohne versteckte Klauseln oder Eintrittsbarrieren.",
-    point4Title: "Professionelle Mentoring-Struktur",
-    point4Desc: "Ausgereifte Begleitungs- und Ausbildungsformate auf jeder Ebene des Aufbaus — vom Einstieg bis zur Führungsrolle.",
+    point2Desc: "Klar definierter rechtlicher Rahmen und transparente Compliance.",
+    point3Title: "Persönliche Begleitung",
+    point3Desc: "1:1-Mentoring vom Einstieg bis zum eigenständigen Aufbau.",
+    point4Title: "Details im Gespräch",
+    point4Desc: "Konkrete Zahlen, Schritte und Möglichkeiten erläutere ich individuell.",
     quote: "Strukturen, die nicht versprechen, sondern halten.",
     btnPrimary: "Mehr über wefi.co",
-    btnSecondary: "Partner werden",
+    btnSecondary: "WeFi-Gitbook (PDF)",
+  },
+
+  // --- BACCARAT ---
+  baccarat: {
+    eyebrow: "PARTNER · BACCARAT ENTERTAINMENT",
+    h1: "Baccarat Staking —",
+    h2: "passive Beteiligung.",
+    lead: "Baccarat Entertainment ist eine Staking-Plattform, auf der Sie sich passiv an den Spielgewinnen erfahrener Profi-Spieler beteiligen — ohne selbst spielen zu müssen. Konditionen, Einstieg und konkrete Zahlen besprechen wir am besten direkt im Gespräch.",
+    point1Title: "Passive Beteiligung",
+    point1Desc: "Sie sind „Backer“ — Profi-Spieler übernehmen das aktive Spiel.",
+    point2Title: "Kalkuliertes Risiko",
+    point2Desc: "Stop-Loss-Regeln und transparente Spielregeln auf Plattform-Ebene.",
+    point3Title: "Frei verfügbar",
+    point3Desc: "Stake jederzeit verfügbar, keine festen Bindungsfristen.",
+    point4Title: "Details im Gespräch",
+    point4Desc: "Beteiligungsmodell, Einstieg und Zahlen kläre ich persönlich.",
+    disclaimer: "Hinweis: Baccarat ist und bleibt ein Glücksspiel — garantierte Gewinne gibt es keine. Staking ist als „Entertainment“ zu verstehen, nicht als klassisches Investment.",
+    btnPdf: "/Baccarat-Entertainment-Information.pdf",
+    btnPdfLabel: "Baccarat-Info (PDF) öffnen",
+    btnSecondary: "Erstgespräch vereinbaren",
   },
 
   // --- REFERENZEN ---
@@ -142,7 +164,7 @@ export const content = {
         quote:
           "Was die Zusammenarbeit auszeichnet, ist die Strukturiertheit der Vorgehensweise. Klare Prozesse, ehrliches Feedback und realistische Zielsetzung statt überzogener Versprechen.",
         name: "Sabine K.",
-        role: "Partnerin seit 2024 · Graz",
+        role: "Partnerin seit 2024 · Bozen, Südtirol",
         initials: "SK",
       },
       {
@@ -199,8 +221,16 @@ export const content = {
     buttonPrimaryHref: "https://www.wefi.co",
     buttonSecondary: "E-Mail senden",
     email: "kontakt@gustavmostetschnig.com",
-    phone: "+43 123 456 789",
-    phoneHref: "tel:+43123456789",
+    phone: "+43 660 123 4567",
+    phoneHref: "tel:+43660123456",
+    phone2: "+357 99 123 456",
+    phone2Label: "Zypern · Larnaca",
+    phone2Href: "tel:+35799123456",
+    socials: [
+      { label: "Instagram", url: "https://www.instagram.com/", icon: "instagram" as const },
+      { label: "Facebook", url: "https://www.facebook.com/", icon: "facebook" as const },
+      { label: "Telegram", url: "https://t.me/", icon: "telegram" as const },
+    ],
   },
 
   // --- FOOTER ---

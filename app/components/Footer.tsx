@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useContent } from "../context/ContentContext";
+import SocialLinks from "./SocialLinks";
 
 export default function Footer() {
   const c = useContent().footer;
@@ -23,6 +24,9 @@ export default function Footer() {
         >
           Gustav Mostetschnig
         </span>
+      </div>
+      <div className="flex justify-center mb-5">
+        <SocialLinks size={16} />
       </div>
       <p className="text-xs mb-1" style={{ color: "#64748b" }}>
         © {new Date().getFullYear()} Gustav Mostetschnig. Alle Rechte vorbehalten.
