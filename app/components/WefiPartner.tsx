@@ -239,31 +239,31 @@ export default function WefiPartner() {
         {/* CTAs */}
         <div className="reveal mt-14 flex flex-wrap gap-4 justify-center" style={{ transitionDelay: "760ms" }}>
           <a
-            href="https://www.wefi.co"
+            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/WeFi-Gitbook-Deutsch.pdf`}
             target="_blank"
             rel="noopener noreferrer"
+            download
             className="btn-shimmer inline-flex items-center gap-2 px-7 py-4 rounded-full font-semibold text-sm transition-all duration-200"
             style={{ backgroundColor: "#C9A84C", color: "#0A1628" }}
             onMouseEnter={(e) => { const el = e.currentTarget; el.style.backgroundColor = "#E8C96A"; el.style.transform = "translateY(-2px)"; el.style.boxShadow = "0 14px 40px rgba(201,168,76,0.32)"; }}
             onMouseLeave={(e) => { const el = e.currentTarget; el.style.backgroundColor = "#C9A84C"; el.style.transform = ""; el.style.boxShadow = "none"; }}
           >
-            {c.btnPrimary}
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-              <path d="M7 17L17 7"/><path d="M8 7h9v9"/>
-            </svg>
+            {c.btnSecondary}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </a>
           <a
-            href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/WeFi-Gitbook-Deutsch.pdf`}
+            href="https://www.wefi.co"
             target="_blank"
             rel="noopener noreferrer"
-            download
             className="inline-flex items-center gap-2 px-7 py-4 rounded-full font-semibold text-sm transition-all duration-200"
             style={{ border: "1px solid rgba(201,168,76,0.4)", color: "#C9A84C" }}
             onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "rgba(201,168,76,0.08)"; e.currentTarget.style.borderColor = "#C9A84C"; }}
             onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "transparent"; e.currentTarget.style.borderColor = "rgba(201,168,76,0.4)"; }}
           >
-            {c.btnSecondary}
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            {c.btnPrimary}
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M7 17L17 7"/><path d="M8 7h9v9"/>
+            </svg>
           </a>
         </div>
       </div>
