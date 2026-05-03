@@ -7,37 +7,25 @@ export default function About() {
     <section id="about" className="py-24 px-6" style={{ backgroundColor: "#07101F" }}>
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center" style={{ gridTemplateColumns: "1fr 1.1fr" }}>
-          {/* Photo / placeholder */}
+          {/* Photo */}
           <div className="reveal relative">
             <div
-              className="aspect-[4/5] rounded-2xl flex items-center justify-center overflow-hidden relative"
+              className="aspect-[4/5] rounded-2xl overflow-hidden relative"
               style={{
-                backgroundColor: "#142038",
-                border: "1px solid rgba(201,168,76,0.15)",
-                animation: "panBg 14s ease-in-out infinite",
+                border: "1px solid rgba(201,168,76,0.2)",
+                boxShadow: "0 24px 80px rgba(0,0,0,0.5)",
               }}
             >
-              {/* Decorative stripes */}
-              <div
-                className="absolute inset-0 opacity-[0.04]"
-                style={{
-                  backgroundImage: "repeating-linear-gradient(-45deg, #C9A84C 0px, #C9A84C 1px, transparent 1px, transparent 14px)",
-                }}
+              <img
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/portrait-gm.jpg`}
+                alt="Gustav Mostetschnig"
+                style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: "center top", display: "block" }}
               />
-              <div className="relative text-center p-8 flex flex-col items-center gap-4">
-                <div
-                  className="text-4xl opacity-30"
-                  style={{ fontFamily: "var(--font-playfair)" }}
-                >
-                  GM
-                </div>
-                <p
-                  className="text-xs uppercase tracking-widest"
-                  style={{ fontFamily: "'JetBrains Mono', ui-monospace, monospace", color: "#64748b", letterSpacing: "0.12em" }}
-                >
-                  Portrait · Gustav Mostetschnig
-                </p>
-              </div>
+              {/* Subtle gold overlay at bottom */}
+              <div
+                className="absolute bottom-0 left-0 right-0 h-24 pointer-events-none"
+                style={{ background: "linear-gradient(to top, rgba(7,16,31,0.5), transparent)" }}
+              />
             </div>
             {/* Badge */}
             <div
