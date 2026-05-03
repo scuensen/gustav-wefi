@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { Menu, X } from "lucide-react";
 import { useContent } from "../context/ContentContext";
 import BookingModal from "./BookingModal";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 export default function Navbar() {
   const content = useContent();
@@ -71,6 +72,7 @@ export default function Navbar() {
 
         {/* Actions */}
         <div className="hidden lg:flex items-center gap-3">
+          <LanguageSwitcher />
           {/* wefi.co external link */}
           <a
             href="https://www.wefi.co"
@@ -136,6 +138,9 @@ export default function Navbar() {
           >
             {content.nav.cta}
           </button>
+          <div className="pt-2">
+            <LanguageSwitcher />
+          </div>
         </div>
       )}
     </nav>

@@ -1,6 +1,7 @@
 "use client";
 import { createContext, useContext, useState, useEffect, ReactNode, useCallback } from "react";
 import { content as defaultContent } from "../content";
+import { contentEn } from "../lib/content-en";
 
 type ContentType = typeof defaultContent;
 
@@ -9,6 +10,8 @@ interface ContentContextValue {
   updateField: (path: string, value: string) => void;
   reset: () => void;
   exportContent: () => void;
+  language: "en" | "de";
+  setLanguage: (lang: "en" | "de") => void;
 }
 
 const ContentContext = createContext<ContentContextValue>({
@@ -16,6 +19,8 @@ const ContentContext = createContext<ContentContextValue>({
   updateField: () => {},
   reset: () => {},
   exportContent: () => {},
+  language: "en",
+  setLanguage: () => {},
 });
 
 function setNestedValue(obj: unknown, path: string, value: string): unknown {
@@ -38,8 +43,9 @@ function getNestedValue(obj: unknown, path: string): unknown {
 }
 
 export function ContentProvider({ children }: { children: ReactNode }) {
-  const [content, setContentState] = useState<ContentType>(defaultContent);
+  const [deContent, setContentState] = useState<ContentType>(defaultContent);
   const [loaded, setLoaded] = useState(false);
+  const [language, setLanguageState] = useState<"en" | "de">("en");
 
   useEffect(() => {
     const saved = localStorage.getItem("gm-content-overrides");
@@ -62,8 +68,18 @@ export function ContentProvider({ children }: { children: ReactNode }) {
         setContentState(merged as ContentType);
       } catch {}
     }
+    const savedLang = localStorage.getItem("gm-language") as "en" | "de" | null;
+    if (savedLang === "de" || savedLang === "en") setLanguageState(savedLang);
     setLoaded(true);
   }, []);
+
+  const setLanguage = useCallback((lang: "en" | "de") => {
+    setLanguageState(lang);
+    localStorage.setItem("gm-language", lang);
+  }, []);
+
+  // Serve English content directly; German uses merged de+overrides
+  const content = language === "en" ? contentEn : deContent;
 
   const updateField = useCallback((path: string, value: string) => {
     setContentState((prev) => {
@@ -100,7 +116,7 @@ export function ContentProvider({ children }: { children: ReactNode }) {
   if (!loaded) return null;
 
   return (
-    <ContentContext.Provider value={{ content, updateField, reset, exportContent }}>
+    <ContentContext.Provider value={{ content, updateField, reset, exportContent, language, setLanguage }}>
       {children}
     </ContentContext.Provider>
   );
@@ -108,4 +124,8 @@ export function ContentProvider({ children }: { children: ReactNode }) {
 
 export const useContent = () => useContext(ContentContext).content;
 export const useContentEditor = () => useContext(ContentContext);
+export const useLanguage = () => {
+  const ctx = useContext(ContentContext);
+  return { language: ctx.language, setLanguage: ctx.setLanguage };
+};
 export { getNestedValue };
