@@ -227,8 +227,8 @@ export const content = {
     phone2Label: "Zypern · Larnaca",
     phone2Href: "tel:+35799123456",
     socials: [
-      { label: "Instagram", url: "https://www.instagram.com/", icon: "instagram" as const },
-      { label: "Facebook", url: "https://www.facebook.com/", icon: "facebook" as const },
+      { label: "Instagram", url: "https://www.instagram.com/gmostet/", icon: "instagram" as const },
+      { label: "Facebook", url: "https://www.facebook.com/gustav.mostetschnig", icon: "facebook" as const },
       { label: "Telegram", url: "https://t.me/", icon: "telegram" as const },
     ],
   },
