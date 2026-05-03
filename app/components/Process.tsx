@@ -31,7 +31,7 @@ function TiltCard({ children, className, style }: { children: React.ReactNode; c
 export default function Process() {
   const c = useContent().process;
   return (
-    <section id="process" className="py-24 px-6" style={{ backgroundColor: "#07101F" }}>
+    <section id="process" className="py-16 md:py-24 px-6" style={{ backgroundColor: "#07101F" }}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <div className="reveal">

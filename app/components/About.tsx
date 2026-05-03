@@ -4,9 +4,9 @@ import { useContent } from "../context/ContentContext";
 export default function About() {
   const c = useContent().about;
   return (
-    <section id="about" className="py-24 px-6" style={{ backgroundColor: "#07101F" }}>
+    <section id="about" className="py-16 md:py-24 px-6" style={{ backgroundColor: "#07101F" }}>
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-center" style={{ gridTemplateColumns: "1fr 1.1fr" }}>
+        <div className="grid md:grid-cols-2 gap-16 items-center">
           {/* Photo */}
           <div className="reveal relative">
             <div
@@ -29,7 +29,7 @@ export default function About() {
             </div>
             {/* Badge */}
             <div
-              className="absolute -bottom-5 -right-5 p-5 rounded-2xl text-center"
+              className="absolute -bottom-4 -right-3 p-5 rounded-2xl text-center"
               style={{
                 backgroundColor: "#142038",
                 border: "1px solid rgba(201,168,76,0.25)",

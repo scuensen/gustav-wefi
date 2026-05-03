@@ -30,7 +30,7 @@ export default function Baccarat() {
   return (
     <section
       id="baccarat"
-      className="relative py-36 px-6 overflow-hidden"
+      className="relative py-16 md:py-24 px-6 overflow-hidden"
       style={{
         background: "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.05), transparent 60%), linear-gradient(180deg, #07101F 0%, #0A1628 100%)",
         borderTop: "1px solid rgba(201,168,76,0.18)",
@@ -91,7 +91,7 @@ export default function Baccarat() {
             href="https://baccarat-entertainment.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="block max-w-2xl mx-auto text-center relative px-8 py-14 rounded-3xl overflow-hidden transition-all duration-300"
+            className="block max-w-2xl mx-auto text-center relative px-4 py-10 sm:px-8 sm:py-14 rounded-3xl overflow-hidden transition-all duration-300"
             style={{
               background: "linear-gradient(135deg, rgba(20,32,56,0.8), rgba(10,22,40,0.6))",
               border: "1px solid rgba(201,168,76,0.4)",
@@ -110,7 +110,7 @@ export default function Baccarat() {
             </div>
             <div
               className="relative font-bold leading-none"
-              style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(36px, 6vw, 72px)", letterSpacing: "-0.03em", color: "#fff" }}
+              style={{ fontFamily: "var(--font-playfair)", fontSize: "clamp(22px, 5vw, 56px)", letterSpacing: "-0.03em", color: "#fff", wordBreak: "break-word" }}
             >
               Baccarat<span style={{ color: "#C9A84C" }}>·</span>Entertainment
             </div>

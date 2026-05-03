@@ -167,7 +167,7 @@ export default function TweaksPanel() {
         <div
           className="fixed top-0 right-0 bottom-0 z-[89] flex flex-col"
           style={{
-            width: "360px",
+            width: "min(360px, 100vw)",
             backgroundColor: "#07101F",
             borderLeft: "1px solid rgba(201,168,76,0.2)",
             boxShadow: "-20px 0 60px rgba(0,0,0,0.5)",

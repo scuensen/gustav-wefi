@@ -7,7 +7,7 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(null);
 
   return (
-    <section id="faq" className="py-24 px-6" style={{ backgroundColor: "#0A1628" }}>
+    <section id="faq" className="py-16 md:py-24 px-6" style={{ backgroundColor: "#0A1628" }}>
       <div className="max-w-[880px] mx-auto">
         <div className="grid gap-12 md:grid-cols-[1fr_1.6fr]">
           {/* Left: heading */}

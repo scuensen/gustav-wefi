@@ -46,7 +46,7 @@ export default function WefiPartner() {
   return (
     <section
       id="wefi-partner"
-      className="relative py-36 px-6 overflow-hidden"
+      className="relative py-16 md:py-24 px-6 overflow-hidden"
       style={{
         background: "radial-gradient(ellipse at 50% 0%, rgba(201,168,76,0.06), transparent 60%), linear-gradient(180deg, #0A1628 0%, #06101e 100%)",
         borderTop: "1px solid rgba(201,168,76,0.18)",
@@ -127,7 +127,7 @@ export default function WefiPartner() {
             href="https://www.wefi.co"
             target="_blank"
             rel="noopener noreferrer"
-            className="block max-w-2xl mx-auto text-center relative px-8 py-14 rounded-3xl overflow-hidden transition-all duration-300"
+            className="block max-w-2xl mx-auto text-center relative px-4 py-10 sm:px-8 sm:py-14 rounded-3xl overflow-hidden transition-all duration-300"
             style={{
               background: "linear-gradient(135deg, rgba(20,32,56,0.8), rgba(10,22,40,0.6))",
               border: "1px solid rgba(201,168,76,0.4)",
@@ -167,7 +167,7 @@ export default function WefiPartner() {
               wefi<span style={{ color: "#C9A84C", WebkitTextFillColor: "#C9A84C" }}>.</span>co
             </div>
             <div
-              className="relative mt-4 inline-flex items-center gap-3 text-[11px] uppercase tracking-[0.22em]"
+              className="relative mt-4 inline-flex flex-wrap items-center justify-center gap-3 text-[11px] uppercase tracking-[0.22em]"
               style={{ color: "#64748b", fontFamily: "'JetBrains Mono', ui-monospace, monospace" }}
             >
               <span>Internationaler Partner</span>

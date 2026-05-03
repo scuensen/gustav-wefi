@@ -132,7 +132,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-8 border"
+          className="inline-flex flex-wrap items-center justify-center gap-2 px-4 py-2 rounded-full text-xs font-semibold mb-8 border text-center"
           style={{
             borderColor: "rgba(201,168,76,0.3)",
             color: "#C9A84C",
@@ -208,7 +208,7 @@ export default function Hero() {
         </div>
 
         {/* Stats with count-up */}
-        <div ref={statsRef} className="mt-20 grid grid-cols-3 gap-8 max-w-xl mx-auto">
+        <div ref={statsRef} className="mt-20 grid grid-cols-3 gap-4 sm:gap-8 max-w-xl mx-auto">
           {c.stats.map((s, i) => (
             <div key={s.label} className="text-center">
               <div

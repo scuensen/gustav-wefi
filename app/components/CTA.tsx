@@ -12,7 +12,7 @@ export default function CTA() {
   return (
     <>
       <BookingModal open={modalOpen} onClose={() => setModalOpen(false)} />
-      <section id="cta" className="py-24 px-6 relative overflow-hidden" style={{ backgroundColor: "#07101F" }}>
+      <section id="cta" className="py-16 md:py-24 px-6 relative overflow-hidden" style={{ backgroundColor: "#07101F" }}>
         <div
           className="absolute inset-0 pointer-events-none"
           style={{

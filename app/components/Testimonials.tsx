@@ -6,7 +6,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="py-24 px-6"
+      className="py-16 md:py-24 px-6"
       style={{ backgroundColor: "#07101F", borderTop: "1px solid rgba(255,255,255,0.04)" }}
     >
       <div className="max-w-6xl mx-auto">
