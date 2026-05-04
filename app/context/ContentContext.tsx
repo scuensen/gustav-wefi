@@ -44,7 +44,6 @@ function getNestedValue(obj: unknown, path: string): unknown {
 
 export function ContentProvider({ children }: { children: ReactNode }) {
   const [deContent, setContentState] = useState<ContentType>(defaultContent);
-  const [loaded, setLoaded] = useState(false);
   const [language, setLanguageState] = useState<"en" | "de">("en");
 
   useEffect(() => {
@@ -52,7 +51,6 @@ export function ContentProvider({ children }: { children: ReactNode }) {
     if (saved) {
       try {
         const overrides = JSON.parse(saved);
-        // Deep merge overrides into defaults
         const merged = JSON.parse(JSON.stringify(defaultContent));
         function deepMerge(target: Record<string, unknown>, source: Record<string, unknown>) {
           for (const key of Object.keys(source)) {
@@ -70,7 +68,6 @@ export function ContentProvider({ children }: { children: ReactNode }) {
     }
     const savedLang = localStorage.getItem("gm-language") as "en" | "de" | null;
     if (savedLang === "de" || savedLang === "en") setLanguageState(savedLang);
-    setLoaded(true);
   }, []);
 
   const setLanguage = useCallback((lang: "en" | "de") => {
@@ -112,8 +109,6 @@ export function ContentProvider({ children }: { children: ReactNode }) {
     a.download = "content-overrides.json";
     a.click();
   }, []);
-
-  if (!loaded) return null;
 
   return (
     <ContentContext.Provider value={{ content, updateField, reset, exportContent, language, setLanguage }}>

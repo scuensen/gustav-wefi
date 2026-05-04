@@ -94,6 +94,7 @@ export const content = {
       "Etablierte Mentoring-Strukturen auf allen Ebenen",
     ],
     button: "WeFi-Gitbook (PDF) öffnen",
+    ctaPrimary: "Erstgespräch vereinbaren",
     wefiBtnPdf: "/WeFi-Gitbook-Deutsch.pdf",
     buttonHref: "#cta",
     card: {

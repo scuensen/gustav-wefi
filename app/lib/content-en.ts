@@ -87,6 +87,7 @@ export const contentEn: ContentType = {
       "Established mentoring structures at all levels",
     ],
     button: "Open WeFi Gitbook (PDF)",
+    ctaPrimary: "Schedule initial consultation",
     wefiBtnPdf: "/WeFi-Gitbook-Deutsch.pdf",
     buttonHref: "#cta",
     card: {

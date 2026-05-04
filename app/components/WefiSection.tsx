@@ -42,7 +42,7 @@ export default function WefiSection() {
                 onMouseEnter={(e) => { const el = e.currentTarget; el.style.backgroundColor = "#E8C96A"; el.style.boxShadow = "0 8px 30px rgba(201,168,76,0.35)"; }}
                 onMouseLeave={(e) => { const el = e.currentTarget; el.style.backgroundColor = "#C9A84C"; el.style.boxShadow = "none"; }}
               >
-                Erstgespräch vereinbaren
+                {c.ctaPrimary}
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
               <a

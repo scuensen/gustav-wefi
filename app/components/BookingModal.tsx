@@ -1,8 +1,6 @@
 "use client";
 import { useEffect, useRef, FormEvent } from "react";
-import { content } from "../content";
-
-const email = content.cta.email;
+import { useContent } from "../context/ContentContext";
 
 interface Props {
   open: boolean;
@@ -10,6 +8,7 @@ interface Props {
 }
 
 export default function BookingModal({ open, onClose }: Props) {
+  const email = useContent().cta.email;
   const firstInput = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
