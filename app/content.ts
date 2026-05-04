@@ -238,4 +238,19 @@ export const content = {
     disclaimer:
       "Diese Website stellt keine Anlageberatung dar. Alle Angaben sind ohne Gewähr.",
   },
+
+  // --- RECHTLICHES (Impressum & Datenschutz) ---
+  legal: {
+    name: "Gustav Mostetschnig",
+    address: "Musterstraße 1",
+    city: "1010 Wien, Österreich",
+    email: "kontakt@gustavmostetschnig.com",
+    phone: "+43 123 456 789",
+    phoneHref: "tel:+43123456789",
+    uid: "ATU00000000",
+    businessPurpose: "Mentoring und Begleitung im Bereich Network-Marketing und Vermögensaufbau",
+    profession: "Selbstständiger Vertriebspartner",
+    chamber: "Wirtschaftskammer Wien",
+    authority: "Magistratisches Bezirksamt für den 1. Bezirk",
+  },
 };

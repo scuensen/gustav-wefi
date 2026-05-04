@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { content } from "../content";
 
 export const metadata: Metadata = {
   title: "Datenschutzerklärung — Gustav Mostetschnig",
 };
 
 export default function DatenschutzPage() {
+  const l = content.legal;
   return (
     <div style={{ backgroundColor: "#0A1628", minHeight: "100vh", color: "#fff" }}>
       {/* Nav */}
@@ -60,9 +62,9 @@ export default function DatenschutzPage() {
 
           <div className="flex flex-col gap-10">
             <Section title="1. Verantwortlicher">
-              <p>Gustav Mostetschnig<br />Musterstraße 1, 1010 Wien, Österreich<br />
-                E-Mail: <a href="mailto:kontakt@gustavmostetschnig.com" style={{ color: "#C9A84C" }}>kontakt@gustavmostetschnig.com</a><br />
-                Telefon: <a href="tel:+43123456789" style={{ color: "#C9A84C" }}>+43 123 456 789</a>
+              <p>{l.name}<br />{l.address}, {l.city}<br />
+                E-Mail: <a href={`mailto:${l.email}`} style={{ color: "#C9A84C" }}>{l.email}</a><br />
+                Telefon: <a href={l.phoneHref} style={{ color: "#C9A84C" }}>{l.phone}</a>
               </p>
             </Section>
 

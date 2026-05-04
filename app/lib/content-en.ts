@@ -226,4 +226,18 @@ export const contentEn: ContentType = {
     disclaimer:
       "This website does not constitute investment advice. All information is provided without guarantee.",
   },
+
+  legal: {
+    name: "Gustav Mostetschnig",
+    address: "Musterstraße 1",
+    city: "1010 Wien, Austria",
+    email: "kontakt@gustavmostetschnig.com",
+    phone: "+43 123 456 789",
+    phoneHref: "tel:+43123456789",
+    uid: "ATU00000000",
+    businessPurpose: "Mentoring and coaching in the field of network marketing and wealth building",
+    profession: "Independent sales partner",
+    chamber: "Wirtschaftskammer Wien",
+    authority: "Magistratisches Bezirksamt für den 1. Bezirk",
+  },
 };

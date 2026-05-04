@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { content } from "../content";
 
 export const metadata: Metadata = {
   title: "Impressum — Gustav Mostetschnig",
 };
 
 export default function ImpressumPage() {
+  const l = content.legal;
   return (
     <div style={{ backgroundColor: "#0A1628", minHeight: "100vh", color: "#fff" }}>
       {/* Nav */}
@@ -60,23 +62,23 @@ export default function ImpressumPage() {
 
           <div className="flex flex-col gap-10">
             <Section title="Diensteanbieter">
-              <p>Gustav Mostetschnig<br />Musterstraße 1<br />1010 Wien, Österreich</p>
+              <p>{l.name}<br />{l.address}<br />{l.city}</p>
             </Section>
 
             <Section title="Kontakt">
               <dl className="flex flex-col gap-2">
-                <Row label="E-Mail"><a href="mailto:kontakt@gustavmostetschnig.com" style={{ color: "#C9A84C" }}>kontakt@gustavmostetschnig.com</a></Row>
-                <Row label="Telefon"><a href="tel:+43123456789" style={{ color: "#C9A84C" }}>+43 123 456 789</a></Row>
+                <Row label="E-Mail"><a href={`mailto:${l.email}`} style={{ color: "#C9A84C" }}>{l.email}</a></Row>
+                <Row label="Telefon"><a href={l.phoneHref} style={{ color: "#C9A84C" }}>{l.phone}</a></Row>
               </dl>
             </Section>
 
             <Section title="Unternehmensdaten">
               <dl className="flex flex-col gap-2">
-                <Row label="Unternehmensgegenstand">Mentoring und Begleitung im Bereich Network-Marketing und Vermögensaufbau</Row>
-                <Row label="Berufsbezeichnung">Selbstständiger Vertriebspartner</Row>
-                <Row label="UID-Nummer">ATU00000000</Row>
-                <Row label="Mitgliedschaften">Wirtschaftskammer Wien</Row>
-                <Row label="Aufsichtsbehörde">Magistratisches Bezirksamt für den 1. Bezirk</Row>
+                <Row label="Unternehmensgegenstand">{l.businessPurpose}</Row>
+                <Row label="Berufsbezeichnung">{l.profession}</Row>
+                <Row label="UID-Nummer">{l.uid}</Row>
+                <Row label="Mitgliedschaften">{l.chamber}</Row>
+                <Row label="Aufsichtsbehörde">{l.authority}</Row>
               </dl>
             </Section>
 
